@@ -12,17 +12,17 @@
   <div>
     <h4 class="red" :style="스타일">{{ products[0] }}</h4>
     <p>10 만원</p>
-    <button @click="fn">허위매물신고</button> <span>신고수 : {{ reportCnt[0] }}</span>
+    <button @click="fnTest">허위매물신고</button> <span>신고수 : {{ reportCnt[0] }}</span>
   </div>
   <div>
     <h4 class="red" :style="스타일">{{ products[1] }}</h4>
     <p>20 만원</p>
-    <button @click="fn">허위매물신고</button> <span>신고수 : {{ reportCnt[1] }}</span>
+    <button @click="fnTest">허위매물신고</button> <span>신고수 : {{ reportCnt[1] }}</span>
   </div>
   <div>
     <h4 class="red" :style="스타일">{{ products[2] }}</h4>
     <p>15 만원</p>
-    <button @click="fn">허위매물신고</button> <span>신고수 : {{ reportCnt[2] }}</span>
+    <button @click="fnTest">허위매물신고</button> <span>신고수 : {{ reportCnt[2] }}</span>
   </div>
 
 </template>
@@ -45,6 +45,8 @@ export default {
     
   }
 }
+
+
 </script>
 
 <style>
