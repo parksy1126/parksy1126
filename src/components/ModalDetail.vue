@@ -1,10 +1,12 @@
 <template>
-  <div class="black-bg" v-if="nowModalOpenState">
+  <div class="black-bg" v-if="modalOpenState">
     <div class="white-bg">
+        <img :src="onerooms[modalClickId].image" />
         <h4>{{ onerooms[modalClickId].title }}</h4>
         <p>{{ onerooms[modalClickId].content }}</p>
+        <p>{{ onerooms[modalClickId].price }}</p>
         <DiscountBanner></DiscountBanner>
-        <button @click="nowModalOpenState=false;">닫기</button>
+        <button @click="parentModalClose">닫기</button>
     </div>
   </div> 
 </template>
@@ -20,13 +22,23 @@ export default {
     modalOpenState: Boolean,
     modalClickId: Number,
   },
+  watch : {
+    modalOpenState(){
+      if( this.modalOpenState ){
+        console.log('modalOpenState : '+this.modalOpenState);
+        
+      }
+    }
+  },
   data() {
     return {
-      nowModalOpenState : this.modalOpenState,
+      
     }
   },
   methods : {
-    
+    parentModalClose(){
+      this.$emit('fnModalClose');
+    }
   },
    components: {
       DiscountBanner : DiscountBanner,
@@ -36,7 +48,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 
 </style>
                
