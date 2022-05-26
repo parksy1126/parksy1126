@@ -1,35 +1,39 @@
 <template>
   
-  <ModalDetail :onerooms=onerooms :modalOpenState=modalOpenState :modalClickId=modalClickId></ModalDetail>
-
-  <div class="menu">
-    <a v-for="(menu,i) in menus" :key="i">{{ menu }}-{{ i }}</a>
-  </div>
-
-  
-
-  <div v-for="oneroom in onerooms" :key="oneroom.id">
-    <img :src="oneroom.image" class="room-img"/>
-    <h4 class="red" :style="스타일" @click="fnModalView(oneroom.id)">{{ oneroom.title }}</h4>
-    <p>{{ oneroom.price }} 만원</p>
-  </div>
-
-  <!-- <div>
-    <h4 class="red" :style="스타일">{{ products[0] }}</h4>
-    <p>10 만원</p>
-    <button @click="fnReport(0)">허위매물신고</button> <span>신고수 : {{ reportCnt[0] }}</span>
-  </div>
   <div>
-    <h4 class="red" :style="스타일">{{ products[1] }}</h4>
-    <p>20 만원</p>
-    <button @click="fnReport(1)">허위매물신고</button> <span>신고수 : {{ reportCnt[1] }}</span>
-  </div>
-  <div>
-    <h4 class="red" :style="스타일">{{ products[2] }}</h4>
-    <p>15 만원</p>
-    <button @click="fnReport(2)">허위매물신고</button> <span>신고수 : {{ reportCnt[2] }}</span>
-  </div> -->
+    <ModalDetail :onerooms=onerooms :modalOpenState=modalOpenState :modalClickId=modalClickId></ModalDetail>
+    
 
+    <div class="menu">
+      <a v-for="(menu,i) in menus" :key="i">{{ menu }}-{{ i }}</a>
+    </div>
+
+    
+
+    <div v-for="oneroom in onerooms" :key="oneroom.id">
+      <img :src="oneroom.image" class="room-img"/>
+      <h4 class="red" :style="스타일" @click="fnModalView(oneroom.id)">{{ oneroom.title }}</h4>
+      <p>{{ oneroom.price }} 만원</p>
+    </div>
+
+
+    <!-- <div>
+      <h4 class="red" :style="스타일">{{ products[0] }}</h4>
+      <p>10 만원</p>
+      <button @click="fnReport(0)">허위매물신고</button> <span>신고수 : {{ reportCnt[0] }}</span>
+    </div>
+    <div>
+      <h4 class="red" :style="스타일">{{ products[1] }}</h4>
+      <p>20 만원</p>
+      <button @click="fnReport(1)">허위매물신고</button> <span>신고수 : {{ reportCnt[1] }}</span>
+    </div>
+    <div>
+      <h4 class="red" :style="스타일">{{ products[2] }}</h4>
+      <p>15 만원</p>
+      <button @click="fnReport(2)">허위매물신고</button> <span>신고수 : {{ reportCnt[2] }}</span>
+    </div> -->
+
+  </div>
 </template>
 
 <script>

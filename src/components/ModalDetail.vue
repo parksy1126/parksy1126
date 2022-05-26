@@ -3,15 +3,15 @@
     <div class="white-bg">
         <h4>{{ onerooms[modalClickId].title }}</h4>
         <p>{{ onerooms[modalClickId].content }}</p>
-        <Discount></Discount>
+        <DiscountBanner></DiscountBanner>
         <button @click="nowModalOpenState=false;">닫기</button>
     </div>
-  </div>
+  </div> 
 </template>
 
 <script>
 
-// import Discount from "./components/DiscountBanner.vue";
+ import DiscountBanner from "../components/DiscountBanner.vue";
 
 export default {
   name: 'ModalDetail',
@@ -28,9 +28,9 @@ export default {
   methods : {
     
   },
-  components: {
-    // Discount : Discount,
-  }
+   components: {
+      DiscountBanner : DiscountBanner,
+   }
 }
 
 </script>
