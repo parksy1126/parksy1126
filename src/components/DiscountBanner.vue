@@ -1,6 +1,6 @@
 <template>
   <div class="discount">
-    20% 할인 들어갑니다.
+    {{discountValue}}% 할인 들어갑니다.
   </div>
 </template>
 
@@ -11,6 +11,12 @@ export default {
     return {
       
     }
+  },
+  props : {
+    discountValue : Number,
+  },
+  mounted(){
+    this.$emit('fnDiscountValueMinus');
   },
   methods : {
     
